@@ -3,11 +3,16 @@
     --color-principal-letra: hsl(218, 17%, 35%);
     --color-titulo: hsl(220, 24%, 12%);
     --color-texto-boton:  hsl(0, 0%, 100%);
+    --color-texto-subtitulo: hsl(0, 0%, 0%);
+    --color-enlaces: hsl(290, 90%, 20%);
 
     --letra-boton: 0.85rem;
     --letra-nombre-marca: 1.5rem;
     --letra-m: 1.15rem;
     --letra-hero: 3.2rem;
+    --letra-subtitulo: 2.1rem;
+    --letra-descripcion-perfil: 1rem;
+    --letra-descripcion-cargo: 0.8rem;
 
     --peso-thin: 400;
     --peso-normal: 500;
@@ -96,7 +101,7 @@ ul {
     background-color: white;
     margin: 0 auto;
     align-items: center;
-    padding: 0rem 3.5rem 0rem 9.5rem;
+    justify-content: center;
 }
 
 .seccion-uno {
@@ -152,7 +157,7 @@ article {
 }
 
 .img-seccion-1 {
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     height: 380px;
     object-fit: cover;
@@ -166,4 +171,81 @@ article {
     background: hsl(238, 74%, 61%);
     color: var(--color-texto-boton);
     margin-top: 1.5rem;
+}
+
+.seccion-dos-p1{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.subtitulo-normal{
+    margin: 10px 0 10px 0;
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-normal);
+    color: var(--color-texto-subtitulo);
+}
+.subtitulo-bold{
+    margin: 10px 0 10px 0;
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-semi);
+    color: var(--color-texto-subtitulo);
+}
+.boton-flecha{
+    background: hsl(0, 0%, 100%);
+    border: 2px solid var(--color-enlaces);
+    color: var(--color-enlaces);
+    margin: 0 100px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: var(--peso-bold);
+}
+.perfiles{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.perfil{
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    padding: 0 1.5rem;
+}
+
+.perfil:hover{
+    cursor: pointer;
+    opacity: 1;    
+    transform: scale(1.05);
+}
+
+.perfil img{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}
+
+.perfil .estrellas{
+    color: hsl(50, 100%, 50%);
+    font-size: 1.4rem;
+}
+
+.perfil .nombre{
+    font-family: var(--fuente-principal);
+    font-weight: var(--peso-semi);
+    font-size: var(--letra-descripcion-perfil);
+}
+.perfil:hover .nombre{
+    color: var(--color-enlaces);
+}
+.perfil .cargo{
+    font-family: var(--fuente-principal);  
+    font-weight: var(--peso-normal);
+    font-size: var(--letra-descripcion-cargo);
 }
