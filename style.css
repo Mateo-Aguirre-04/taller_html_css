@@ -1,0 +1,114 @@
+:root{
+    --color-fondo-principal: hsl(0, 0%, 100%);
+    --color-principal-letra: hsl(218, 17%, 35%);
+    --letra-boton: 0.85rem;
+    --letra-nombre-marca: 1.5rem;
+    --letra-m: 1rem;
+    --fuente-principal: system-ui;
+    --layout-fila: flex;
+    --espaciado-uniforme: space-between;
+    --letra-hero: 2.8rem;
+    --color-titulo: hsl(220, 24%, 12%);
+
+    --radio-boton: 5px;
+}
+
+.horizontal-uniforme{
+    display: var(--layout-fila);
+    justify-content: var(--espaciado-uniforme);
+}
+
+.header-navegacion{
+    height: 60px;
+    padding: 0;
+    align-items: center;
+    background-color: var(--color-fondo-principal);
+    margin: 0 2rem 0 4rem;
+}
+
+
+.no-margen p{ 
+    margin: 0;
+    padding:0;
+}
+
+.letra-descripcion-general{
+    color: var(--color-principal-letra);
+    font-size: var(--letra-m);
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+}
+
+.nombre-marca{
+    color: hsl(0, 0%, 0%);
+    font-size: var(--letra-nombre-marca);
+    font-family: var(--fuente-principal);
+}
+
+ul{
+    gap: 3rem;
+    list-style: none;
+}
+
+.boton-global {
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-boton);
+    font-weight: 500;
+    border-radius: var(--radio-boton);
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.boton-contacto{
+    width: 7rem;
+    height: 2.5rem; 
+    background: linear-gradient(20deg, #4b097a 0%, #5724a7 50%, #5258e5 100%);
+    color: #ffffff;
+}
+
+.seccion-impar{
+    background-color: white;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0rem 3.5rem 0rem 9.5rem;
+}
+.seccion-uno{
+    min-height: calc(100vh - 65px); /* Resta del header */
+    width: 100%;
+    background: linear-gradient(180deg, #eceef1 0px, #ffffff 50px);
+}
+
+.titulo-principal {
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-hero);
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--color-titulo);
+}
+
+.titulo-principal strong {
+    font-weight: 800;
+}
+
+/* Titulos de 2 lineas */
+.titulo-dos-lineas {
+    display: block;
+    line-height: 1.2;
+}
+
+/* Linea 1 normal */
+.titulo-dos-lineas > span:first-child {
+    display: block;
+    font-weight: 400;
+}
+
+/* Linea dos en negrlla */
+.titulo-dos-lineas > span:last-child {
+    display: block;
+    font-weight: 700;
+}
