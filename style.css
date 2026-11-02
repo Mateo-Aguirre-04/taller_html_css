@@ -1,24 +1,32 @@
-:root{
+:root {
     --color-fondo-principal: hsl(0, 0%, 100%);
     --color-principal-letra: hsl(218, 17%, 35%);
+    --color-titulo: hsl(220, 24%, 12%);
+    --color-texto-boton:  hsl(0, 0%, 100%);
+
     --letra-boton: 0.85rem;
     --letra-nombre-marca: 1.5rem;
-    --letra-m: 1rem;
+    --letra-m: 1.15rem;
+    --letra-hero: 3.2rem;
+
+    --peso-thin: 400;
+    --peso-normal: 500;
+    --peso-semi: 700;
+    --peso-bold: 800;
+
     --fuente-principal: system-ui;
     --layout-fila: flex;
     --espaciado-uniforme: space-between;
-    --letra-hero: 2.8rem;
-    --color-titulo: hsl(220, 24%, 12%);
-
+    --grado-degradado-recuadros: 20deg;
     --radio-boton: 5px;
 }
 
-.horizontal-uniforme{
+.horizontal-uniforme {
     display: var(--layout-fila);
     justify-content: var(--espaciado-uniforme);
 }
 
-.header-navegacion{
+.header-navegacion {
     height: 60px;
     padding: 0;
     align-items: center;
@@ -26,26 +34,31 @@
     margin: 0 2rem 0 4rem;
 }
 
-
-.no-margen p{ 
+.no-margen p { 
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
-.letra-descripcion-general{
+.letra-descripcion-general {
     color: var(--color-principal-letra);
     font-size: var(--letra-m);
     font-family: var(--fuente-principal);
-    font-weight: 500;
+    font-weight: var(--peso-normal);
+    line-height: 1.6;
 }
 
-.nombre-marca{
+.texto-thin {
+    font-weight: var(--peso-thin);
+    line-height: 1.7;
+}
+
+.nombre-marca {
     color: hsl(0, 0%, 0%);
     font-size: var(--letra-nombre-marca);
     font-family: var(--fuente-principal);
 }
 
-ul{
+ul {
     gap: 3rem;
     list-style: none;
 }
@@ -53,7 +66,7 @@ ul{
 .boton-global {
     font-family: var(--fuente-principal);
     font-size: var(--letra-boton);
-    font-weight: 500;
+    font-weight: var(--peso-normal);
     border-radius: var(--radio-boton);
     border: none;
     cursor: pointer;
@@ -64,51 +77,92 @@ ul{
     text-decoration: none;
 }
 
-.boton-contacto{
-    width: 7rem;
-    height: 2.5rem; 
-    background: linear-gradient(20deg, #4b097a 0%, #5724a7 50%, #5258e5 100%);
-    color: #ffffff;
+.seccion-uno-layout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
 }
 
-.seccion-impar{
+.boton-contacto {
+    width: 7.1rem;
+    height: 2.6rem; 
+    background: linear-gradient(var(--grado-degradado-recuadros), hsl(275, 86%, 26%) 0%, hsl(263, 65%, 40%) 40%, hsl(238, 74%, 61%) 100%);
+    color: var(--color-texto-boton);
+}
+
+.seccion-impar {
     background-color: white;
     margin: 0 auto;
     align-items: center;
     padding: 0rem 3.5rem 0rem 9.5rem;
 }
-.seccion-uno{
-    min-height: calc(100vh - 65px); /* Resta del header */
+
+.seccion-uno {
+    min-height: calc(100vh - 65px);
     width: 100%;
-    background: linear-gradient(180deg, #eceef1 0px, #ffffff 50px);
+    background: linear-gradient(180deg, hsl(216, 15%, 94%) 0px, hsl(0, 0%, 100%) 50px);
+}
+
+article {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
 }
 
 .titulo-principal {
     font-family: var(--fuente-principal);
     font-size: var(--letra-hero);
     line-height: 1.15;
-    font-weight: 400;
     color: var(--color-titulo);
 }
 
-.titulo-principal strong {
-    font-weight: 800;
-}
-
-/* Titulos de 2 lineas */
 .titulo-dos-lineas {
     display: block;
-    line-height: 1.2;
+    line-height: 1.35;
 }
 
-/* Linea 1 normal */
 .titulo-dos-lineas > span:first-child {
     display: block;
-    font-weight: 400;
+    font-weight: 300;
 }
 
-/* Linea dos en negrlla */
 .titulo-dos-lineas > span:last-child {
     display: block;
-    font-weight: 700;
+    font-weight: var(--peso-bold);
+}
+
+.texto-destacado-degradado {
+    background: linear-gradient(180deg, hsl(320, 45%, 50%) 0%, hsl(285, 36%, 56%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.titulo-dos-lineas > span:first-child .texto-destacado-degradado {
+    font-weight: var(--peso-semi);
+}
+
+.titulo-dos-lineas > span:last-child .texto-destacado-degradado {
+    font-weight: var(--peso-bold);
+}
+
+.img-seccion-1 {
+    max-width: 600px;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block; 
+}
+
+.boton-comenzar {
+    width: 11.5rem;
+    height: 3.2rem; 
+    background: hsl(238, 74%, 61%);
+    color: var(--color-texto-boton);
+    margin-top: 1.5rem;
 }
