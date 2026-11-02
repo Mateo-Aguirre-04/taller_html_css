@@ -45,6 +45,7 @@
     font-family: var(--fuente-principal);
     font-weight: var(--peso-normal);
     line-height: 1.6;
+    text-decoration: none;
 }
 
 .texto-thin {
