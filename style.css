@@ -330,14 +330,11 @@ article {
 }
 /* parte gisss*/
 .Featured {
-    display: flex;
-    justify-content: space-between; /* Clave para que se parezca al diseño original */
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 0 2rem;
 }
 .resource-card {
-    width: 260px;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Alinea el enlace a la derecha */
@@ -358,9 +355,9 @@ article {
     width: 100%;
 }
 .resource-link {
-    font-size: 0.85rem;
-    font-weight: var(--peso-semi);
+    font-size: var(--letra-m);
+    font-weight: var(--peso-normal);
     color: var(--color-enlaces);
     text-decoration: none;
-    margin-top: 5px;
+    margin-top: 1rem;
 }
