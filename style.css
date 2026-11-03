@@ -1,0 +1,287 @@
+:root {
+    --color-fondo-principal: hsl(0, 0%, 100%);
+    --color-principal-letra: hsl(218, 17%, 35%);
+    --color-titulo: hsl(220, 24%, 12%);
+    --color-texto-boton:  hsl(0, 0%, 100%);
+    --color-texto-subtitulo: hsl(0, 0%, 0%);
+    --color-enlaces: hsl(290, 90%, 20%);
+
+    --letra-boton: 0.85rem;
+    --letra-nombre-marca: 1.5rem;
+    --letra-m: 1.15rem;
+    --letra-hero: 3.2rem;
+    --letra-subtitulo: 2.1rem;
+    --letra-descripcion-perfil: 1rem;
+    --letra-descripcion-cargo: 0.8rem;
+
+    --peso-thin: 400;
+    --peso-normal: 500;
+    --peso-semi: 700;
+    --peso-bold: 800;
+
+    --fuente-principal: system-ui;
+    --layout-fila: flex;
+    --espaciado-uniforme: space-between;
+    --grado-degradado-recuadros: 20deg;
+    --radio-boton: 5px;
+}
+
+.horizontal-uniforme {
+    display: var(--layout-fila);
+    justify-content: var(--espaciado-uniforme);
+}
+
+.header-navegacion {
+    height: 60px;
+    padding: 0;
+    align-items: center;
+    background-color: var(--color-fondo-principal);
+    margin: 0 2rem 0 4rem;
+}
+
+.no-margen p { 
+    margin: 0;
+    padding: 0;
+}
+
+.letra-descripcion-general {
+    color: var(--color-principal-letra);
+    font-size: var(--letra-m);
+    font-family: var(--fuente-principal);
+    font-weight: var(--peso-normal);
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.texto-thin {
+    font-weight: var(--peso-thin);
+    line-height: 1.7;
+}
+
+.nombre-marca {
+    color: hsl(0, 0%, 0%);
+    font-size: var(--letra-nombre-marca);
+    font-family: var(--fuente-principal);
+}
+
+ul {
+    gap: 3rem;
+    list-style: none;
+}
+
+.boton-global {
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-boton);
+    font-weight: var(--peso-normal);
+    border-radius: var(--radio-boton);
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.seccion-uno-layout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+.boton-contacto {
+    width: 7.1rem;
+    height: 2.6rem; 
+    background: linear-gradient(var(--grado-degradado-recuadros), hsl(275, 86%, 26%) 0%, hsl(263, 65%, 40%) 40%, hsl(238, 74%, 61%) 100%);
+    color: var(--color-texto-boton);
+}
+
+.seccion-impar {
+    background-color: white;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-uno {
+    min-height: calc(100vh - 65px);
+    width: 100%;
+    background: linear-gradient(180deg, hsl(216, 15%, 94%) 0px, hsl(0, 0%, 100%) 50px);
+}
+
+article {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+}
+
+.titulo-principal {
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-hero);
+    line-height: 1.15;
+    color: var(--color-titulo);
+}
+
+.titulo-dos-lineas {
+    display: block;
+    line-height: 1.35;
+}
+
+.titulo-dos-lineas > span:first-child {
+    display: block;
+    font-weight: 300;
+}
+
+.titulo-dos-lineas > span:last-child {
+    display: block;
+    font-weight: var(--peso-bold);
+}
+
+.texto-destacado-degradado {
+    background: linear-gradient(180deg, hsl(320, 45%, 50%) 0%, hsl(285, 36%, 56%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.titulo-dos-lineas > span:first-child .texto-destacado-degradado {
+    font-weight: var(--peso-semi);
+}
+
+.titulo-dos-lineas > span:last-child .texto-destacado-degradado {
+    font-weight: var(--peso-bold);
+}
+
+.img-seccion-1 {
+    max-width: 500px;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block; 
+}
+
+.boton-comenzar {
+    width: 11.5rem;
+    height: 3.2rem; 
+    background: hsl(238, 74%, 61%);
+    color: var(--color-texto-boton);
+    margin-top: 1.5rem;
+}
+
+.seccion-dos-p1{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.subtitulo-normal{
+    margin: 10px 0 10px 0;
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-normal);
+    color: var(--color-texto-subtitulo);
+}
+.subtitulo-bold{
+    margin: 10px 0 10px 0;
+    font-family: var(--fuente-principal);
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-semi);
+    color: var(--color-texto-subtitulo);
+}
+.boton-flecha{
+    background: hsl(0, 0%, 100%);
+    border: 2px solid var(--color-enlaces);
+    color: var(--color-enlaces);
+    margin: 0 100px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: var(--peso-bold);
+}
+.perfiles{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.perfil{
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    padding: 0 1.5rem;
+}
+
+.perfil:hover{
+    cursor: pointer;
+    opacity: 1;    
+    transform: scale(1.05);
+}
+
+.perfil img{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}
+
+.perfil .estrellas{
+    color: hsl(50, 100%, 50%);
+    font-size: 1.4rem;
+}
+
+.perfil .nombre{
+    font-family: var(--fuente-principal);
+    font-weight: var(--peso-semi);
+    font-size: var(--letra-descripcion-perfil);
+}
+.perfil:hover .nombre{
+    color: var(--color-enlaces);
+}
+.perfil .cargo{
+    font-family: var(--fuente-principal);  
+    font-weight: var(--peso-normal);
+    font-size: var(--letra-descripcion-cargo);
+}
+/* parte gisss*/
+.Featured {
+    display: flex;
+    justify-content: space-between; /* Clave para que se parezca al diseño original */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.resource-card {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el enlace a la derecha */
+}
+.resource-card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.resource-title {
+    font-size: 0.95rem;
+    font-weight: var(--peso-normal); /* Le da el grosor correcto parecido al original */
+    color: var(--color-titulo);
+    margin: 12px 0 8px 0;
+    line-height: 1.4;
+    text-align: left;
+    width: 100%;
+}
+.resource-link {
+    font-size: 0.85rem;
+    font-weight: var(--peso-semi);
+    color: var(--color-enlaces);
+    text-decoration: none;
+    margin-top: 5px;
+}
